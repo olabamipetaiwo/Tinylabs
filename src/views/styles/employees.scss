@@ -1,0 +1,372 @@
+.row {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.main {
+    height:100vh;
+    width:100%;
+    background-color:$white;
+    display:flex;
+    flex-direction:column;
+
+    header {
+        height:8rem;
+        background:$white;
+        border: 1px solid rgba(106, 126, 138, 0.1);
+        width:100%;
+        padding:1rem 2rem;
+        position:fixed;
+        z-index:5;
+
+        @include respond(phone) {
+            height:auto 
+        }
+
+        .profile {
+            figure {
+                margin-right:1rem;
+            }
+
+            h1 {
+              @include fontNormal(1.6rem,2.5rem,$blue);
+                margin-right:.5rem;
+            }
+
+            button {
+                outline:none;
+                border:none;
+                background-color:transparent;
+                box-shadow:none;
+                cursor:pointer;
+            }
+        }
+    }
+
+    .content {
+        display:flex;
+
+
+        nav {
+                // flex-basis: 8.5rem;
+                width:8rem;
+                background-color:$white;
+                border: 1px solid rgba(106, 126, 138, 0.1);
+                overflow: hidden;
+                height: 100vh;
+                position: fixed;
+                display:flex;
+                flex-direction:column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top:7rem;
+
+                ul {
+                    list-style:none;
+                    cursor:pointer;
+
+                    li {
+                        width: 8.5rem;
+                        margin-top: 4.5rem;
+                        margin-bottom: 4.5rem;
+                        transition:all .2s;
+                        @include flexCenter;
+
+                        a {
+                                svg {
+                                    g {
+                                        opacity:0.5;
+                                    }
+
+                                    path {
+                                        stroke:#013C61;
+                                    }
+                                }
+                            }
+                        &.active {
+                            border-left: 5px solid $green;
+
+                            a {
+                                svg {
+
+                                    path {
+                                        stroke:$green;
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+
+        .employees {
+                background-color: rgba(#E5E5E5,0.5);
+                margin-left: 8rem;
+                width: 100%;
+                padding: 2rem;
+                padding-top: 10rem;
+                padding-left: 3rem;
+
+               @include respond(misc1) {
+                padding:12rem;  
+                padding-left: 3rem;
+               }
+                h1 {
+                    @include fontBold(2.6rem,2.5rem,$blue);
+                }
+
+                h2 {
+                     @include fontBold(3.6rem,2.5rem,$blue);
+                }
+
+                p {
+                     @include fontNormal(2.2rem,1.5rem,$blue);
+                }
+
+                .header {
+                    margin-bottom:5rem;
+                    margin-bottom:1.5rem;
+
+                    @include respond(misc1) { 
+                        margin-top:1rem;
+                    }
+                }
+
+                .intro {
+                    background: #FFFFFF;
+                    border-radius: 5px;
+                    margin-bottom: 2rem;
+                    padding:4.5rem;
+
+                    @include respond(misc1) {
+                        flex-direction: column;
+                      }
+
+                    @include respond(phone) { 
+                        flex-wrap:wrap;
+                    }
+
+                    h2,p {
+                        @include respond(misc1) {
+                            flex-basis:100%;
+                            margin-bottom:2.5rem;
+                        }
+                    }
+                }
+
+                .options {
+                    width:100%;
+                    margin-bottom: 2rem;
+
+                    @include respond(misc1) {
+                        flex-direction: column;
+                      }
+
+                    select {
+                            margin-right:1.2rem;
+                            width:60%;
+                            border:none;
+                            outline:none;
+                            border-bottom:1px solid #E6E7EB;
+                            @include fontNormal(2rem,2.5rem,#013C61);
+                            position:relative;
+                            padding:1rem 2rem;
+                    }
+                    button {
+                        margin-right:1.2rem;
+                        width:40%;
+                    }
+
+
+                    .left {
+                        @include respond(misc1) {
+                            margin-bottom:2rem;
+                        }
+
+                       .input__row {
+                        position:relative;
+                        width:100%;
+                        @include flexCenter;
+
+                        
+
+                        figure {
+                            position:absolute;
+                            top:1.8rem;
+                            right:1rem;
+                            width:1rem;
+                            height:1rem;
+
+                            img {
+                                width:100%;
+                                height:100%;
+                            }
+                         }
+
+                          input {
+                            width:100%;
+                            border:none;
+                            outline:none;
+                            border-bottom:1px solid #E6E7EB;
+                            @include fontNormal(2rem,2.5rem,#013C61);
+                            position:relative;
+                            padding:1rem 2rem;
+
+                            &::-webkit-input-placeholder {
+                              color: $blue2;
+                            }
+
+                            &:focus {
+                              background-color:transparent;
+                              color:$blue;
+                            }
+                        }
+                     }
+                    }
+                   
+                   
+
+                    p {
+                        margin-right:.8rem; 
+
+                        span {
+                            border: 1px solid rgba(1, 60, 97, 0.1);
+                            padding:.5rem;
+                            border-radius: 3px;
+                        }
+                    }
+
+                    svg {
+                        cursor:pointer;
+                        margin-right:.8rem;
+                    }
+  
+                }
+
+                &__table {
+                    table {
+                        font-family:$base_font;
+                        border-collapse: collapse;
+                        width: 100%;
+                        margin-top:4rem;
+
+                        @include respond(misc1) {
+                            padding-right:12rem;
+                            background-color: green;
+                        }
+
+
+
+                        thead {
+                            tr {
+                                width:100%;
+
+                                th {
+                                      text-align: left;
+                                      padding:1rem 2rem;
+                                      @include fontNormal(1.4rem,1.5rem,#013C61);
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                background-color: $white;
+                                background: #FFFFFF;
+                                border-bottom:1.5rem solid rgba(#E5E5E5,0.5);
+                                border-radius: 5px;
+                                width:100%;
+
+                                td {
+                                    padding:1rem 2rem;
+                                    text-align: left;
+                                    @include fontNormal(1.6rem,2rem,#6A7E8A);
+                                    
+                                    button {
+                                        box-shadow:none;
+                                        background-color:transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
+
+
+
+
+
+/* Styling Checkbox Starts */
+.checkbox-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: 1.3px solid rgba(106, 126, 138, 0.4);
+    border-radius: 0.5px;
+  	transition: all 0.3s ease-out;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom {
+    background-color: #FFFFFF;
+    opacity:1;
+}
+
+
+.checkbox-label .checkbox-custom::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 0px;
+    width: 0px;
+    opacity:1;
+  	transition: all 0.3s ease-out;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+    opacity: 1;
+    width: 21px;
+    height: 21px;
+    transform: scale(0.85);
+    background-color: $green;
+}
+
+.checkbox-label:hover ~ .checkbox-custom::after {
+    opacity: 1;
+    width: 21px;
+    height: 21px;
+    transform: scale(0.85);
+    background-color: $green;
+}
+
+
+
+
+
+
+

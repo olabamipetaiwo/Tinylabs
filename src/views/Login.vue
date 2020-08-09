@@ -24,7 +24,7 @@
                               v-model="email"
                               required />
                               <figure>
-                                  <img  class="form__group__input__icon" alt="icon" src="./assets/user.png" />
+                                  <img  class="form__group__input__icon" alt="icon" src="./assets/@.png" />
                               </figure>
                               
                       </div>
@@ -40,7 +40,7 @@
                               v-model="password"
                               required />
                               <figure>
-                                  <img  class="form__group__input__icon" alt="icon" src="./assets/user.png" />
+                                  <img  class="form__group__input__icon" alt="icon" src="./assets/eye.png" />
                               </figure>
                               
                       </div>

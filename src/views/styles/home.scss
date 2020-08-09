@@ -4,16 +4,41 @@
     background-color:$white;
     display:flex;
 
+    @include respond(phone) {
+      height:auto; 
+      margin-top:10rem;
+    }
+
     &__left {
       flex-basis:40%;
-      // background-image: url("./assets/man.png");
-      // background-size:contain;
-      background-color:red;
+      background-image: url("./assets/man.png");
+      background-size:contain;
       background-repeat:no-repeat;
       background-size:100% 100%;
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: flex-end;
+      text-align:center;
+
+      h2 {
+        @include fontBold(2.4rem,3.6rem,$white);
+      }
+
+    p {
+          @include fontNormal(2.4rem,3.6rem,$white);
+          width:70%;
+          margin-bottom:2rem;
+    }
+
+      @include respond(phone) {
+        flex-basis:0%;
+        display:none;
+      }
     }
 
     &__right{
+
       flex-basis:auto;
       flex-grow:1;
       flex-direction:column;
@@ -21,8 +46,28 @@
       padding-left:15.8rem;
       padding-right:15.8rem;
 
+      @include respond(phone) {
+        flex-basis:100%;
+        padding-left:5rem;
+        padding-right:5rem;
+      }
+
+      
+    .footer {
+      width:100%;
+      padding-left:3rem;
+      padding-right:3rem;
+      background-color: red;
+    }
+
+
       h2 ,p {
         align-self:flex-start;
+
+        @include respond(phone) {
+          align-self:center;
+          text-align: center;
+        }
       }
 
       h2 {
@@ -49,6 +94,10 @@
           align-self:flex-end;
           text-align:center;
           @include flexCenter;
+
+          @include respond(phone) {
+            width:100%;
+          }
         }
 
 
@@ -104,6 +153,7 @@
                 &:focus {
                     background-color:transparent;
                     color:$blue;
+                    padding: 1rem 1.2rem;
                 }
           }
         }
@@ -116,7 +166,15 @@
     display:flex;
     justify-content:space-between;
 
+    @include respond(phone) { 
+      flex-wrap:wrap;
+    }
+
     .form__group {
       flex-basis:49%;
+
+      @include respond(phone) {
+        flex-basis:100%;
+      }
     }
   }

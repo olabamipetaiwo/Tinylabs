@@ -57,7 +57,7 @@
                               v-model="email"
                               required />
                               <figure>
-                                  <img  class="form__group__input__icon" alt="icon" src="./assets/user.png" />
+                                  <img  class="form__group__input__icon" alt="icon" src="./assets/@.png" />
                               </figure>
                               
                       </div>
@@ -73,7 +73,7 @@
                               v-model="password"
                               required />
                               <figure>
-                                  <img  class="form__group__input__icon" alt="icon" src="./assets/user.png" />
+                                  <img  class="form__group__input__icon" alt="icon" src="./assets/eye.png" />
                               </figure>
                               
                       </div>
@@ -85,7 +85,19 @@
                 </button>
                
             </form>
+
+              <div class="row footer">
+                 <p class="p p-blue">
+                  By siging up, you agree to our 
+                  <router-link  class="p p-green" to="/login">Terms</router-link> and
+                   <router-link  class="p p-green" to="/login">Privacy Policy</router-link>
+                </p>
+                <p>© 2019 Tinylabs. All rights reserved.</p>
+            </div>
+           
       </div>
+
+     
   </div>
 </template>
 
