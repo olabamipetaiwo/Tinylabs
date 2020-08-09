@@ -73,7 +73,7 @@ export default {
         login: async function () {
             this.loading = true;
             setTimeout(() => {
-             this.$router.push('/empoyee');
+             this.$router.push('/employee');
             }, 2000);
         }
 		 }
