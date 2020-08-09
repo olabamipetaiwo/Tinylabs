@@ -5,6 +5,18 @@
             <p >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
             </p>
+            <div class="row dots">
+               <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <rect x="0.5" y="0.5" width="10.5" height="10.5" rx="5.25" fill="#2BDA53"/>
+               </svg>
+
+
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 5.75C0.5 2.85051 2.85051 0.5 5.75 0.5C8.6495 0.5 11 2.85051 11 5.75C11 8.6495 8.6495 11 5.75 11C2.85051 11 0.5 8.6495 0.5 5.75Z" fill="#D0E8DF"/>
+                </svg>
+
+
+            </div>
       </div>
        <div class="home__right">
             <h2 class="heading heading-blue">Create your free Account</h2>

@@ -28,7 +28,14 @@
     p {
           @include fontNormal(2.4rem,3.6rem,$white);
           width:70%;
-          margin-bottom:2rem;
+          margin-bottom:1.5rem;
+    }
+
+    .dots{
+      svg {
+        margin-right: 1rem;
+        margin-bottom:1.5rem;
+      }
     }
 
       @include respond(phone) {
