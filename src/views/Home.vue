@@ -85,15 +85,6 @@
                 </button>
                
             </form>
-
-              <div class="row footer">
-                 <p class="p p-blue">
-                  By siging up, you agree to our 
-                  <router-link  class="p p-green" to="/login">Terms</router-link> and
-                   <router-link  class="p p-green" to="/login">Privacy Policy</router-link>
-                </p>
-                <p>© 2019 Tinylabs. All rights reserved.</p>
-            </div>
            
       </div>
 
