@@ -1,0 +1,78 @@
+// @import './variables';
+
+.heading {
+    font-family:$base_font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.4rem;
+    line-height: 4.6rem;
+
+    &-blue {
+      color: $blue;
+    }
+
+    &-green {
+     color: $green;
+    }
+}
+
+.p {
+    font-family: $base_font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height:1.8rem;
+
+    &-blue {
+      color: $blue;
+    }
+
+    &-green {
+     color: $green;
+    }
+}
+
+button {
+    background: $green;
+    color:$white;
+    outline:none;
+    border:none;
+    padding:1rem 3rem;
+     text-align:center;
+    @include fontNormal(1.8rem,2.2rem,$white);
+    box-shadow: 0px 7px 15px rgba(43, 218, 83, 0.2);
+    border-radius: 3px;
+    transition:all .3s;
+    cursor:pointer;
+
+    &:hover {
+        background-color:rgba($green,0.7);
+    }
+}
+
+.loading {
+        width:3rem;
+        height:3rem;
+        border-radius:50%;
+        background-color:transparent;
+
+        border:0;
+        border-bottom:5px solid $white;
+        border-top:5px solid $white;
+        animation:spin .8s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function:ease-in;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+

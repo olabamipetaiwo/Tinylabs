@@ -1,0 +1,122 @@
+  .home {
+    height:100vh;
+    width:100%;
+    background-color:$white;
+    display:flex;
+
+    &__left {
+      flex-basis:40%;
+      // background-image: url("./assets/man.png");
+      // background-size:contain;
+      background-color:red;
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+    }
+
+    &__right{
+      flex-basis:auto;
+      flex-grow:1;
+      flex-direction:column;
+      @include flexCenter;
+      padding-left:15.8rem;
+      padding-right:15.8rem;
+
+      h2 ,p {
+        align-self:flex-start;
+      }
+
+      h2 {
+         margin-bottom:1.5rem;
+      }
+      
+      p {
+        margin-bottom:3.5rem;
+      }
+      
+      form {
+        width:100%;
+        // height: 510px;
+        background: $white;
+        box-shadow: 0px 20px 50px #EAEEE9;
+        border-radius: 5px;
+        padding:5.5rem;
+        display:flex;
+        flex-direction:column;
+
+
+        button  {
+          width:50%;
+          align-self:flex-end;
+          text-align:center;
+          @include flexCenter;
+        }
+
+
+        .form__group {
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+
+          .input__row {
+            position:relative;
+            width:100%;
+
+            figure {
+              position:absolute;
+              top:.8rem;
+              right:1rem;
+              width:1rem;
+              height:1rem;
+
+              img {
+                width:100%;
+                height:100%;
+              }
+            }
+          }
+          
+
+          label {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color: #6A7E8A;
+            margin-bottom:1rem;
+          }
+
+          input {
+                width:100%;
+                border:none;
+                outline:none;
+                border-bottom:1px solid #E6E7EB;
+                @include fontNormal(2rem,2.5rem,#013C61);
+                position:relative;
+                margin-bottom:3rem;
+                padding-bottom:1rem;
+
+                &::-webkit-input-placeholder {
+                    color: $blue2;
+                }
+
+                &:focus {
+                    background-color:transparent;
+                    color:$blue;
+                }
+          }
+        }
+      }
+    }
+
+  }
+
+  .row {
+    display:flex;
+    justify-content:space-between;
+
+    .form__group {
+      flex-basis:49%;
+    }
+  }
